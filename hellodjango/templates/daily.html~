@@ -1,0 +1,11 @@
+<html>
+<head>
+	<title> Daily Verses </title>
+</head>
+
+<body>
+{{ day }}
+{{ reading|linebreaks }}
+</body>
+</html>
+
