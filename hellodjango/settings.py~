@@ -13,7 +13,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 TEMPLATE_DIRS = (
-	'/home/tyler/hellodjango/hellodjango/templates',
+	os.path.join(BASE_DIR, "templates"),
 )
 	
 # Quick-start development settings - unsuitable for production
