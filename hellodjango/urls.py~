@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib.auth.views import login, logout
-from mysite.views import hello, current_datetime, hours_ahead
-from mysite.books import views
+from hellodjango.views import hello, current_datetime, hours_ahead
+from hellodjango.books import views
 from bible.views import initdb, daily, register
 
 from django.contrib import admin
