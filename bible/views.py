@@ -23,10 +23,12 @@ def initdb(request):
 
 def daily(request):
 	#default start date is January 1, of current year
+	logged_in = False
 	this_year = datetime.date.today().year	
 	start_date = date(this_year, 1, 1)
 	#If a user is logged in check their start date#
 	if request.user.is_authenticated():
+		logged_in = True
 		user_obj = User.objects.get(username=request.user.username) #Get user in users table
 		user_prof = UserProfile.objects.get(user_id=user_obj.id) #Get user profile from user
 		start_date = user_prof.startDate #Get start date
@@ -36,7 +38,7 @@ def daily(request):
 	verse_day = delta.days
 	
 	reading = Reading.objects.filter(day=verse_day)[0] #Not sure why 0 element is verse????#
-	return render(request, 'daily.html', {'reading': reading, 'day': verse_day})
+	return render(request, 'daily.html', {'reading': reading, 'day': verse_day, 'logged': logged_in})
 
 def register(request):
 	if request.method == 'POST':

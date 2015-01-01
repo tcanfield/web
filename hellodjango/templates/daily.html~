@@ -4,7 +4,10 @@
 </head>
 
 <body>
-{{ day }}
+<header>
+<a href: "/accounts/login"> Login </a>
+</header>
+Day: {{ day }}
 {{ reading|linebreaks }}
 </body>
 </html>
