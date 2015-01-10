@@ -3,6 +3,7 @@ from django.contrib.auth.views import login, logout
 from hellodjango.views import hello, current_datetime, hours_ahead
 from hellodjango.books import views
 from bible.views import initdb, daily, register
+from django.conf import settings
 
 from django.contrib import admin
 admin.autodiscover()
