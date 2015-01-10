@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
-    {% static load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'hellodjango/main.css' %}" />
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/main.css' %}" />
 </head>
 <body>
     <nav>
