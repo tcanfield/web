@@ -108,10 +108,10 @@ ALLOWED_HOSTS = ['*']
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 # Static asset configuration
 import os
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/staticfiles/'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'staticfiles'),
 )
