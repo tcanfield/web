@@ -109,7 +109,7 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 import os
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/staticfiles/'
+STATIC_URL = '/app/staticfiles/'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
