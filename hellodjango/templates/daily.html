@@ -1,24 +1,16 @@
-<html>
-<head>
-
-	<title> Daily Verses </title>
-	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'hellodjango/main.css' %}" />
-	
-</head>
-
-<body>
-
-{% if logged %}
+{% extends "base.html" %}
+{% block title %} Daily Verses {% endblock %}
+{% block content %}
+	{% if logged %}
 	<a href= "/accounts/logout"> Logout  </a> <br>
 	
-{% else %}
-	<a href= "/accounts/login">Login</a>&nbsp &nbsp 
-	<a href="/registration/register">   Register </a> <br>
-{% endif %}
+	{% else %}
+		<a href= "/accounts/login">Login</a>&nbsp &nbsp 
+		<a href="/registration/register">   Register </a> <br>
+	{% endif %}
 
 <h1>Day: {{ day }}</h1>
 <p>{{ reading|linebreaks }}</p>
-</body>
-</html>
+{% endblock %}
+
 
