@@ -1,8 +1,11 @@
 html{
-    background: url(tyler.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
+    background-image: url(tyler.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-clip: border-box;
+    background-origin: padding-box;
     -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     
 }
