@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib.auth.views import login, logout
-from hellodjango.views import hello, current_datetime, hours_ahead
+from hellodjango.views import hello, current_datetime, hours_ahead, index
 from hellodjango.books import views
 from bible.views import initdb, daily, register
 from django.conf import settings
@@ -10,7 +10,7 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('', 
-	(r'^$', daily),
+	(r'^$', index),
 	url(r'^hello/$', hello),
 	url(r'^time/$', current_datetime),
 	url(r'^time/plus/(\d{1,2})/$', hours_ahead),

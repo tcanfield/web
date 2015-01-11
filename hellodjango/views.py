@@ -16,3 +16,8 @@ def hours_ahead(request, offset):
 		raise Http404()
 	dt = datetime.datetime.now() + datetime.timedelta(hours=offset)
 	return render(request, 'hours_ahead.html', {'next_time':dt, 'hour_offset': offset})
+
+def index(request):
+	return render(request, 'index.html')
+	pass
+
