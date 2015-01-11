@@ -73,9 +73,6 @@ DATABASES = {
     }
 }
 
-DATABASES = {
-    'default': dj_database_url.config()
-}
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -109,8 +106,8 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 import os
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/app/staticfiles/'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_URL = '/staticfiles/'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
