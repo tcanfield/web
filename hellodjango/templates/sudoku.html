@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Sudoku Solver {% endblock %}
+{% block content %}
+    <form>
+        <table>
+            {% for x in loop_range %}
+                <tr>
+                    <td> <input id="{{x}}1" class="cell"> </input></td>
+                    <td> <input id="{{x}}2" class="cell"> </input></td>
+                    <td> <input id="{{x}}3" class="cell"> </input></td>
+                    <td> <input id="{{x}}4" class="cell"> </input></td>
+                    <td> <input id="{{x}}5" class="cell"> </input></td>
+                    <td> <input id="{{x}}6" class="cell"> </input></td>
+                    <td> <input id="{{x}}7" class="cell"> </input></td>
+                    <td> <input id="{{x}}8" class="cell"> </input></td>
+                    <td> <input id="{{x}}9" class="cell"> </input></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <input type="submit" value="solve"></input>
+    </form>
+
+{% endblock %}
