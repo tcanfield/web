@@ -30,6 +30,13 @@ class sudoku_board:
 
     def get_board(self):
         return self.board_positions
+    
+    def get_single_string(self):
+        string = ""
+        for i in range(self.size):
+            for j in range(self.size):
+                string = string + str((self.board_positions[i][j]))
+        return string
 
     def __str__(self):
         string = ""

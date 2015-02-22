@@ -1,0 +1,25 @@
+table {
+    border: solid;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.cell{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+
+tr:nth-child(3n) td {
+  border-bottom:solid ;
+}
+
+td:nth-child(3n) {
+  border-right:solid ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* !!! */
+}

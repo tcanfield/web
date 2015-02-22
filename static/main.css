@@ -5,13 +5,3 @@ h1{
 p {
  color:orange
 }
-
-table, td{
-    border: solid;
-}
-
-.cell{
-    height: 30px;
-    width: 30px;
-    text-align: center;
-}
