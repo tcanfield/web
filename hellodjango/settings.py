@@ -43,6 +43,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 	'hellodjango.books',
 	'bible',
+	'sudoku',
+	'disick',
 )
 
 MIDDLEWARE_CLASSES = (
